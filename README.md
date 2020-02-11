@@ -14,4 +14,5 @@ pip install websocket-client
 ## How To Run
 
 Server: python3 server.py
+
 Client: Python3 client.py
