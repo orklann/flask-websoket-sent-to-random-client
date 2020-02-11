@@ -1,7 +1,7 @@
 # flask-websoket-sent-to-random-client
 Demo: Randomly sent message from websocket server to clients
 
-## Requiements:
+## Requirements:
 
 #### Python 3
 
