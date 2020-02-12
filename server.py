@@ -3,9 +3,19 @@
 import logging
 from websocket_server import WebsocketServer
 
+connections = []
+packages = []
+
 
 def new_client(client, server):
-    server.send_message_to_all("Hey all, a new client has joined us")
+    global connections
+    #server.send_message_to_all("Hey all, a new client has joined us")
+    connections.append(client)
+    print("connections: ", len(connections))
+
+
+def pack():
+    pass
 
 
 server = WebsocketServer(13254, host='127.0.0.1', loglevel=logging.INFO)
