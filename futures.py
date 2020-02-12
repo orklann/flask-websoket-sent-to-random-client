@@ -8,12 +8,21 @@ def task(message):
     return message
 
 
+futures = []
+
+
+def test():
+    print(futures[0].done())
+
+
 def main():
     executor = ThreadPoolExecutor(6)
     for i in [5,  4, 3, 2, 1]:
         future = executor.submit(task, ("%d" % i))
-        future
+        futures.append(future)
+    test()
     sleep(10)
+    test()
 
 
 if __name__ == '__main__':
